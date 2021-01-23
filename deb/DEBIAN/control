@@ -1,0 +1,7 @@
+Package: rickroll
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: amd64
+Maintainer: Vincent Schweiger <vincent.schweiger@xolley.de>
+Description: Well, you know the rules

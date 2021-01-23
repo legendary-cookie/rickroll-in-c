@@ -13,8 +13,11 @@ glfont: glfont.c Makefile
 
 $(EXEC): $(OBJS) $(HDRS) Makefile
 	$(CC) -o $@ $(OBJS) $(CFLAGS)
+deb:
+	cp $(EXEC) deb/usr/bin/$(EXEC)
+	dpkg-deb --root-owner-group -b deb/ rickroll-1.0-0.deb
 clean:
 	rm -f $(EXEC) $(OBJS)
-.PHONY: all clean
+.PHONY: all clean deb
 
 
